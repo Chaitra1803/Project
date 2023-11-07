@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $GIT_BRANCH == 'origin/dev' ]; then
+if ["$GIT_BRANCH" == 'origin/dev' ]; then
     # Build and push to the development repository
     build.sh
     docker login
@@ -12,7 +12,7 @@ if [ $GIT_BRANCH == 'origin/dev' ]; then
     docker push veera1808/dev_repo
 
 
-elif [ $GIT_BRANCH == 'origin/main' ]; then
+elif ["$GIT_BRANCH" == 'origin/main' ]; then
     # Build and push to the production repository
     build.sh
     docker login
