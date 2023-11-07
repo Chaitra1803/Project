@@ -22,7 +22,7 @@ elif ([ "$GIT_BRANCH" == 'origin/main' ]) then
     docker push $DOCKERHUB_PRIVATEREPO
 
 
-else
-    echo "Deployment error"
+
+   
 fi
 
