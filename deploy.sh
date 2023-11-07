@@ -8,7 +8,7 @@ if (["$GIT_BRANCH" == 'origin/dev' ]) then
         sh 'docker push $DOCKER_BFLASK_IMAGE'
     }
     docker tag my-img $DOCKER_BFLASK_IMAGE
-    docker push veera1808/dev_repo
+    docker push $DOCKERHUB_PUBLICREPO
 
 
 elif ([ "$GIT_BRANCH" == 'origin/main' ]) then
@@ -19,7 +19,7 @@ elif ([ "$GIT_BRANCH" == 'origin/main' ]) then
         sh 'docker push $DOCKER_BFLASK_IMAGE'
     }
     docker tag my-img $DOCKER_BFLASK_IMAGE
-    docker push veera1808/prod_repo
+    docker push $DOCKERHUB_PRIVATEREPO
 
 
 else
