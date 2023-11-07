@@ -9,7 +9,9 @@ if [[ $GIT_BRANCH == 'origin/dev' ]]; then
         sh 'docker push $DOCKER_BFLASK_IMAGE'
     }
     docker tag my-img $DOCKER_BFLASK_IMAGE
-    docker push dev/docker repo
+    docker push veera1808/dev_repo
+
+
 elif [[ $GIT_BRANCH == 'origin/main' ]]; then
     # Build and push to the production repository
     build.sh
@@ -19,7 +21,9 @@ elif [[ $GIT_BRANCH == 'origin/main' ]]; then
         sh 'docker push $DOCKER_BFLASK_IMAGE'
     }
     docker tag my-img $DOCKER_BFLASK_IMAGE
-    docker push prod/docker
+    docker push veera1808/prod_repo
+
+
 else
     echo "Deployment error"
 fi
