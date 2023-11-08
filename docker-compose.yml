@@ -2,6 +2,6 @@ version: "3.9"
 
 services:
   reactjs-demo:
-    image: reactjs-demo
+    image: react-appimg
     ports:
       - "80:80"
