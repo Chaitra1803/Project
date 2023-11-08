@@ -1,12 +1,10 @@
 pipeline {
     agent any
+
     stages {
-        stage('Deploy') {
+        stage('Checkout') {
             steps {
-                sh 'chmod +x deploy.sh'
-                sh './deploy.sh'
+               git branch: 'main',
+               url: 'https://github.com/Chaitra1803/Project.git'
             }
         }
-    }
-}
-
